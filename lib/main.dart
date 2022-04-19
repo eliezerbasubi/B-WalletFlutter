@@ -1,4 +1,5 @@
 import 'package:bwalletflutter/routes/index.dart';
+import 'package:bwalletflutter/theme/index.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,10 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: "home",
+      theme: AppTheme.define(),
+      initialRoute: "/",
       routes: routes,
     );
   }

@@ -1,5 +1,5 @@
-import 'package:bwalletflutter/theme/colors.dart';
 import 'package:bwalletflutter/theme/index.dart';
+import 'package:bwalletflutter/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class Onboarding extends StatelessWidget {
@@ -18,7 +18,7 @@ class Onboarding extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
             children: [
-              Image.asset("assets/images/wallet.png"),
+              Image.asset(AssetsImage.wallet),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -54,10 +54,10 @@ class Onboarding extends StatelessWidget {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
-                          Text("Let's get started", style: TextStyle(color: Color(0xff1d3557), fontWeight: FontWeight.w500, fontSize: 18),),
+                          Text("Let's get started", style: TextStyle(color: Color(ColorCodes.primary), fontWeight: FontWeight.w500, fontSize: 18),),
                           
                           CircleAvatar(
-                            backgroundColor: Color(0xff9E80FF),
+                            backgroundColor: Color(ColorCodes.tertiary),
                             child: Icon( 
                             Icons.arrow_right_alt,
                             size: 24.0,

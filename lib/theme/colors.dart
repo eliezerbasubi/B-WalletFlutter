@@ -1,15 +1,16 @@
+import 'package:bwalletflutter/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 @immutable
 class ThemeColors {
-  final primary = const Color(0xff1d3557);
-  final secondary = const Color(0xff7DFFF3);
-  final tertiary = const Color(0xff9E80FF);
+  final primary = const Color(ColorCodes.primary);
+  final secondary = const Color(ColorCodes.secondary);
+  final tertiary = const Color(ColorCodes.tertiary);
   final black50 = const Color.fromARGB(0, 0, 0, 5);
-  final green = const Color(0x0002F48B);
-  final red = const Color(0xffe63946);
-  final gray = const Color(0xfff6f6f6);
-  final gray10 = const Color(0xffDADADA);
+  final green = const Color(ColorCodes.green);
+  final red = const Color(ColorCodes.red);
+  final gray = const Color(ColorCodes.gray);
+  final gray10 = const Color(ColorCodes.gray10);
 
   const ThemeColors();
 }

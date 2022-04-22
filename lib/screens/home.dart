@@ -1,7 +1,5 @@
 import 'package:bwalletflutter/components/home_hero_details.dart';
 import 'package:bwalletflutter/components/home_tokens_details.dart';
-import 'package:bwalletflutter/components/token_selector.dart';
-import 'package:bwalletflutter/theme/index.dart';
 import 'package:bwalletflutter/utils/assets.dart';
 import 'package:flutter/material.dart';
 

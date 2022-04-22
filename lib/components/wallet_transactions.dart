@@ -8,9 +8,12 @@ import 'package:flutter/material.dart';
 
 Widget transactionTitle({TextStyle? style, required Transaction transaction}) {
   if (transaction.type == "swap") {
-    return Text(
-      "Swap ${transaction.amount.toStringAsFixed(2)} ${TOKENS[transaction.from]!.symbol} for ${TOKENS[transaction.to]!.balance} ${TOKENS[transaction.to]!.symbol}",
-      style: style,
+    return Container(
+      margin: const EdgeInsets.only(bottom: Sizes.p5),
+      child: Text(
+        "Swap ${transaction.amount.toStringAsFixed(2)} ${TOKENS[transaction.from]!.symbol} for ${TOKENS[transaction.to]!.balance} ${TOKENS[transaction.to]!.symbol}",
+        style: style,
+      ),
     );
   }
 

@@ -1,17 +1,20 @@
 import 'package:bwalletflutter/theme/index.dart';
 import 'package:bwalletflutter/utils/assets.dart';
 import 'package:bwalletflutter/utils/data.dart';
+import 'package:bwalletflutter/utils/helpers.dart';
 import 'package:flutter/material.dart';
 
 class WalletTokens extends StatelessWidget {
-  const WalletTokens({Key? key}) : super(key: key);
+  WalletTokens({Key? key}) : super(key: key);
+
+  final tokens = TOKENS.values.toList();
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       physics: const BouncingScrollPhysics(),
       shrinkWrap: true,
-      itemCount: tokens.length,
+      itemCount: TOKENS.length,
       padding: const EdgeInsets.symmetric(vertical: 5),
       itemBuilder: (context, index) => ListTile(
         contentPadding: const EdgeInsets.only(left: 2),
@@ -38,12 +41,14 @@ class WalletTokens extends StatelessWidget {
         subtitle: Row(
           children: [
             Text(
-              "\$${tokens[index].priceUSD}",
+              "\$${convertTokenToDollars(1, tokens[index].name)}",
               style: TextStyle(
                   fontFamily: AppTheme.fonts.ibmBMPlexMono,
                   fontSize: Sizes.medium),
             ),
-            const SizedBox(width: 10,),
+            const SizedBox(
+              width: 10,
+            ),
             Text(
               "${tokens[index].rate}%",
               style: TextStyle(

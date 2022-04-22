@@ -1,8 +1,9 @@
 import 'package:bwalletflutter/models/index.dart';
 import 'package:bwalletflutter/utils/assets.dart';
 
-List<Token> tokens = [
-  Token(
+// ignore: non_constant_identifier_names
+Map<String, Token> TOKENS = {
+  "Bitcoin": Token(
     id: 1,
     name: "Bitcoin",
     symbol: "BTC",
@@ -13,7 +14,7 @@ List<Token> tokens = [
     balance: 0,
     defaultSwapChain: "Binance",
   ),
-  Token(
+  "Ethereum": Token(
     id: 2,
     name: "Ethereum",
     symbol: "ETH",
@@ -24,7 +25,7 @@ List<Token> tokens = [
     balance: 0,
     defaultSwapChain: "Bitcoin",
   ),
-  Token(
+  "Binance": Token(
     id: 3,
     name: "Binance",
     symbol: "BSC",
@@ -35,7 +36,7 @@ List<Token> tokens = [
     balance: 0,
     defaultSwapChain: "Polygon",
   ),
-  Token(
+  "Polygon": Token(
     id: 4,
     name: "Polygon",
     symbol: "MATIC",
@@ -46,4 +47,4 @@ List<Token> tokens = [
     balance: 0,
     defaultSwapChain: "Ethereum",
   ),
-];
+};

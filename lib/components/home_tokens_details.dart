@@ -61,9 +61,9 @@ class _HomeTokensDetailsState extends State<HomeTokensDetails>
           ),
           Expanded(child: TabBarView(
             controller: tabController,
-            children: const [
+            children: [
             WalletTokens(),
-            Text("Transactions")
+            const Text("Transactions")
           ]))
         ],
       ),

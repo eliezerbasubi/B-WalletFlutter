@@ -1,6 +1,7 @@
 import 'package:bwalletflutter/components/token_selector.dart';
 import 'package:bwalletflutter/theme/index.dart';
 import 'package:bwalletflutter/utils/assets.dart';
+import 'package:bwalletflutter/utils/helpers.dart';
 import 'package:flutter/material.dart';
 
 class HomeHeroDetails extends StatelessWidget {
@@ -61,7 +62,7 @@ class HomeHeroDetails extends StatelessWidget {
                       left: Radius.circular(Sizes.extraLarge),
                       right: Radius.circular(Sizes.extraLarge)),
                 ),
-                child: const Text("0x84dkj495843453548309593234"),
+                child: Text(truncate("0x84dkj495843453548309593234")),
               )
             ],
           ),

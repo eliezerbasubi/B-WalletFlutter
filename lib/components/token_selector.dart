@@ -11,7 +11,7 @@ class TokenSelector extends StatefulWidget {
 class _TokenSelectorState extends State<TokenSelector> {
   String selectedItem = "Bitcoin";
 
-  final items = tokens
+  final items = TOKENS.values
       .map((item) => DropdownMenuItem(
           value: item.name,
           child: Row(

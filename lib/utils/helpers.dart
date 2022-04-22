@@ -13,5 +13,3 @@ String truncate(String str) {
     str.length
   )}";
 }
-
-String capitalize(String str) => str[0].toUpperCase() + str.substring(1);

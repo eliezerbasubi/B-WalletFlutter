@@ -5,6 +5,7 @@ import 'package:bwalletflutter/utils/assets.dart';
 import 'package:bwalletflutter/utils/data.dart';
 import 'package:bwalletflutter/utils/helpers.dart';
 import 'package:flutter/material.dart';
+import 'package:bwalletflutter/extensions/strings.dart';
 
 Widget transactionTitle({TextStyle? style, required Transaction transaction}) {
   if (transaction.type == "swap") {
@@ -23,7 +24,7 @@ Widget transactionTitle({TextStyle? style, required Transaction transaction}) {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          capitalize(transaction.type),
+          transaction.type.toCapitalCase(),
           style: style,
         ),
         Text("${transaction.amount} ${TOKENS[transaction.from]!.symbol}", style: TextStyle(fontFamily: AppTheme.fonts.ibmBMPlexMono, fontWeight: FontWeight.w500, fontSize: Sizes.large),)

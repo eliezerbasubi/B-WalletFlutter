@@ -1,3 +1,4 @@
+import 'package:bwalletflutter/components/token_image.dart';
 import 'package:bwalletflutter/theme/index.dart';
 import 'package:bwalletflutter/utils/assets.dart';
 import 'package:bwalletflutter/utils/data.dart';
@@ -15,23 +16,12 @@ class WalletTokens extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       shrinkWrap: true,
       itemCount: TOKENS.length,
-      padding: const EdgeInsets.symmetric(vertical: 5),
+      padding: const EdgeInsets.symmetric(vertical: Sizes.p5),
       itemBuilder: (context, index) => ListTile(
         contentPadding: const EdgeInsets.only(left: 2),
-        leading: Container(
-          height: 40,
-          width: 40,
-          decoration: BoxDecoration(
-            boxShadow: const [BoxShadows.shadow],
-            borderRadius: BorderRadius.circular(Sizes.p30),
-          ),
-          child: Image(
-            image: AssetImage(tokens[index].icon),
-            fit: BoxFit.contain,
-          ),
-        ),
+        leading: TokenImage(source: tokens[index].icon),
         title: Container(
-          margin: const EdgeInsets.only(bottom: 5),
+          margin: const EdgeInsets.only(bottom: Sizes.p5),
           child: Text(
             tokens[index].name,
             style: const TextStyle(

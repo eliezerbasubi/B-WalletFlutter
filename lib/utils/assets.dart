@@ -27,6 +27,7 @@ class Sizes {
   static const p20 = 20.0;
   static const p15 = 15.0;
   static const p6 = 6.0;
+  static const p5 = 5.0;
   static const base = 8.0;
   static const small = 12.0;
   static const font = 14.0;

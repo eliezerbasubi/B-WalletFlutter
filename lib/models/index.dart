@@ -9,7 +9,8 @@ class Token {
   final double balance;
   final String defaultSwapChain;
 
-  Token({id,
+  Token(
+      {id,
       required this.name,
       required this.symbol,
       required this.icon,
@@ -27,4 +28,21 @@ class SupportedChains {
   static const polygon = "Polygon";
 
   SupportedChains._();
+}
+
+class Transaction {
+  final String from;
+  final String to;
+  final String type;
+  final double amount;
+  late String token;
+  final String date;
+
+  Transaction(
+      {required this.from,
+      required this.to,
+      required this.type,
+      required this.amount,
+      token,
+      required this.date});
 }

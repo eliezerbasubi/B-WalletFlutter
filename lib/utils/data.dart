@@ -48,3 +48,28 @@ Map<String, Token> TOKENS = {
     defaultSwapChain: "Ethereum",
   ),
 };
+
+// ignore: non_constant_identifier_names
+List<Transaction> TRANSACTIONS = [
+  Transaction(
+    type: "stake",
+    amount: 0,
+    from: "Binance",
+    to: "",
+    date: "2022/04/16",
+  ),
+  Transaction(
+    type: "swap",
+    amount: 100,
+    from: "Polygon",
+    to: "Bitcoin",
+    date: "2022/03/30",
+  ),
+  Transaction(
+    type: "buy",
+    amount: 100,
+    from: "Polygon",
+    to: "",
+    date: "2021/03/30",
+  ),
+];

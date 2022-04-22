@@ -2,6 +2,14 @@ import 'package:bwalletflutter/models/index.dart';
 import 'package:bwalletflutter/utils/assets.dart';
 
 // ignore: non_constant_identifier_names
+Map<String, dynamic> CURRENT_USER = {
+  "username": "@satoshi",
+  "amount": 2.0,
+  "token": "Bitcoin",
+  "address": "0xE21603B45E2675fFeB9f20EED098e268219508CB",
+};
+
+// ignore: non_constant_identifier_names
 Map<String, Token> TOKENS = {
   "Bitcoin": Token(
     id: 1,

@@ -1,6 +1,7 @@
 import 'package:bwalletflutter/components/token_selector.dart';
 import 'package:bwalletflutter/theme/index.dart';
 import 'package:bwalletflutter/utils/assets.dart';
+import 'package:bwalletflutter/utils/data.dart';
 import 'package:bwalletflutter/utils/helpers.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,7 @@ class HomeHeroDetails extends StatelessWidget {
               const SizedBox(
                 height: Sizes.extraLarge + Sizes.base,
               ),
-              Text("@satoshi",
+              Text(CURRENT_USER["username"],
                   style: TextStyle(
                       fontFamily: AppTheme.fonts.ibmBMPlexMono,
                       color: Colors.white,
@@ -45,7 +46,7 @@ class HomeHeroDetails extends StatelessWidget {
               const SizedBox(
                 height: Sizes.small,
               ),
-              Text("US 8950234",
+              Text("US ${convertTokenToDollars(CURRENT_USER["amount"], CURRENT_USER["token"])}",
                   style: TextStyle(
                       fontFamily: AppTheme.fonts.ibmBMPlexMono,
                       color: Colors.white,
@@ -55,14 +56,14 @@ class HomeHeroDetails extends StatelessWidget {
                 height: Sizes.small,
               ),
               Container(
-                padding: const EdgeInsets.all(Sizes.base),
+                padding: const EdgeInsets.symmetric(horizontal: Sizes.medium, vertical: Sizes.base),
                 decoration: const BoxDecoration(
                   color: Color(ColorCodes.secondary),
                   borderRadius: BorderRadius.horizontal(
                       left: Radius.circular(Sizes.extraLarge),
                       right: Radius.circular(Sizes.extraLarge)),
                 ),
-                child: Text(truncate("0x84dkj495843453548309593234")),
+                child: Text(truncate(CURRENT_USER["address"])),
               )
             ],
           ),

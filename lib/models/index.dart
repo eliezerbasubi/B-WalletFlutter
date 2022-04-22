@@ -3,21 +3,21 @@ class Token {
   final String name;
   final String symbol;
   final String icon;
-  late double rate;
-  late double priceUSD;
-  late String status;
-  late double balance;
-  late String defaultSwapChain;
+  final double rate;
+  final double priceUSD;
+  final String status;
+  final double balance;
+  final String defaultSwapChain;
 
   Token({id,
       required this.name,
       required this.symbol,
       required this.icon,
-      rate,
-      priceUSD,
-      status,
-      balance,
-      defaultSwapChain});
+      required this.rate,
+      required this.priceUSD,
+      required this.status,
+      required this.balance,
+      required this.defaultSwapChain});
 }
 
 class SupportedChains {

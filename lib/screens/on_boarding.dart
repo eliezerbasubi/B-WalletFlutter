@@ -45,33 +45,45 @@ class Onboarding extends StatelessWidget {
                     ),
                   ),
 
-                  const SizedBox(height: 30,),
-                  
-                  ElevatedButton(onPressed: () {}, 
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Row(
+                  const SizedBox(
+                    height: 30,
+                  ),
+
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.popAndPushNamed(context, "home");
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
-                          Text("Let's get started", style: TextStyle(color: Color(ColorCodes.primary), fontWeight: FontWeight.w500, fontSize: 18),),
-                          
+                          Text(
+                            "Let's get started",
+                            style: TextStyle(
+                                color: Color(ColorCodes.primary),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 18),
+                          ),
                           CircleAvatar(
                             backgroundColor: Color(ColorCodes.tertiary),
-                            child: Icon( 
-                            Icons.arrow_right_alt,
-                            size: 24.0,
-                            color: Colors.white,
-                          ),
+                            child: Icon(
+                              Icons.arrow_right_alt,
+                              size: 24.0,
+                              color: Colors.white,
+                            ),
                           )
                         ],
                       ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                        primary: AppTheme.colors.secondary,
+                        minimumSize: const Size.fromHeight(55),
+                        shape: const RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(30.0)))),
                   ),
-                   style: ElevatedButton.styleFrom(
-                    primary: AppTheme.colors.secondary,
-                    minimumSize: const Size.fromHeight(55),
-                    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.0)))
-                  ),),
 
                   // const SizedBox(height: 5,)
                 ],

@@ -7,7 +7,6 @@ class ThemeColors {
   final secondary = const Color(ColorCodes.secondary);
   final tertiary = const Color(ColorCodes.tertiary);
   final black50 = const Color.fromARGB(0, 0, 0, 5);
-  final green = const Color(ColorCodes.green);
   final red = const Color(ColorCodes.red);
   final gray = const Color(ColorCodes.gray);
   final gray10 = const Color(ColorCodes.gray10);

@@ -102,7 +102,7 @@ class WalletTransactions extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                tx.date,
+                localeDate(tx.date),
                 style: TextStyle(
                     fontFamily: AppTheme.fonts.ibmBMPlexMono,
                     fontWeight: FontWeight.w400),

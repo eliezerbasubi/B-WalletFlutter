@@ -91,6 +91,7 @@ class WalletTransactions extends StatelessWidget {
 
         return ListTile(
           contentPadding: EdgeInsets.zero,
+          horizontalTitleGap: Sizes.extraLarge,
           title: transactionTitle(
             transaction: tx,
             style: const TextStyle(
